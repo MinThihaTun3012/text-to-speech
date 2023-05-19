@@ -13,6 +13,9 @@ def text_to_speech(text):
     tts.save(f"temp/{my_file_name}.mp3")
     return my_file_name, text
 
+
+text = st.text_input("type some thing", 'Life of Brian')
+
 if st.button("convert"):
     text = ""  # Replace with your desired input text
     result, output_text = text_to_speech(text)
