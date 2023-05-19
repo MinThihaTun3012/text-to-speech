@@ -14,6 +14,16 @@ def text_to_speech(text):
     return my_file_name, text
 
 
+import os
+
+# Specify the path to the directory
+directory = "temp"
+
+# Create the directory if it doesn't exist
+if not os.path.exists(directory):
+    os.makedirs(directory)
+
+    
 text = st.text_input("type something", 'Life of Brian')
 
 if st.button("convert"):
